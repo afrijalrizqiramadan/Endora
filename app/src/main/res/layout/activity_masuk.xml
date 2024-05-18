@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/graybackground"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:textColor="@color/white"
+            android:visibility="invisible"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:background="@color/failed"
+            android:id="@+id/tvGagalMasuk" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_20sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Masuk"
+                android:textColor="@color/blackgray"
+                android:textSize="24dp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:id="@+id/tv_masuk"
+                android:layout_centerHorizontal="true" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_sizeinputandbutton"
+                android:layout_below="@+id/tv_masuk"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/inputbg"
+                android:id="@+id/inputEmail"
+                android:hint="Masukkan email atau username" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_sizeinputandbutton"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_below="@+id/inputEmail"
+                android:id="@+id/inputPassword"
+                android:background="@drawable/inputbg"
+                android:hint="Kata Sandi"
+                android:inputType="textPassword" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lupa kata sandi?"
+                android:textSize="@dimen/dp_font_size_small"
+                android:id="@+id/btLupaSandi"
+                android:textColor="@color/blue"
+                android:layout_below="@id/inputPassword"
+                android:layout_marginVertical="10dp"
+                android:layout_alignParentRight="true" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_sizeinputandbutton"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_roundblue"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:id="@+id/btMasuk"
+                android:layout_below="@id/btLupaSandi"
+                android:text="Masuk" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_sizeinputandbutton"
+                android:layout_below="@id/btMasuk"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:id="@+id/btGoogleLogin"
+                android:gravity="center"
+                android:background="@drawable/bg_roundwhite">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/logogoogle"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/blackgray"
+                    android:background="@color/white"
+                    android:text="Lanjutkan dengan Google" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_sizeinputandbutton"
+                android:layout_below="@id/btGoogleLogin"
+                android:id="@+id/btFBLogin"
+                android:visibility="invisible"
+                android:gravity="center"
+                android:background="@drawable/bg_roundwhite">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/logofb"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:layout_marginLeft="10dp"
+                    android:text="Lanjutkan dengan Facebook" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/btFBLogin"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/tv_barudisini"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blackgray"
+                    android:textSize="@dimen/dp_font_size_small"
+                    android:layout_below="@id/btFBLogin"
+                    android:text="Baru disini ?" />
+
+                <TextView
+                    android:id="@+id/btDaftar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/dp_font_size_small"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/blue"
+                    android:text="@string/daftar" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_below="@+id/tv_barudisini"
+                android:textColor="@color/blackgray"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/layout_ketentuan"
+                android:text="@string/dengan_masuk"
+                android:background="@color/graybackground"
+                android:gravity="center_horizontal" />
+
+            <ImageView
+                android:layout_width="@dimen/_58sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="center"
+                android:layout_below="@id/layout_ketentuan"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:src="@drawable/endorabiru" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_110sdp"
+        android:scaleType="fitXY"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/bg_bottom" />
+
+</RelativeLayout>

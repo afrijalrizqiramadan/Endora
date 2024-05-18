@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/graybackground"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:titleTextColor="@android:color/white"
+        android:background="@color/white">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_margin20"
+            android:id="@+id/btBack"
+            android:src="@drawable/arrowleft" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minHeight="?actionBarSize"
+            android:text="@string/ubah_kata_sandi"
+            android:textAppearance="@style/DPtitletoolbar" />
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dp_margin20">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blackgray"
+            android:id="@+id/keterangan"
+            android:text="@string/masukkan"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_sizeinputandbutton"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="@dimen/dp_margin10"
+            android:layout_below="@+id/keterangan"
+            android:id="@+id/inputPassword"
+            android:background="@drawable/inputbg"
+            android:hint="@string/kata_sandi_baru"
+            android:inputType="textPassword"
+            android:paddingStart="10dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_sizeinputandbutton"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="@dimen/dp_margin10"
+            android:id="@+id/inputPasswordUlang"
+            android:layout_below="@+id/inputPassword"
+            android:background="@drawable/inputbg"
+            android:hint="@string/ketik_ulang_sandi_baru"
+            android:inputType="textPassword" />
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_sizeinputandbutton"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_roundblue"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/btUbahKataSandi"
+            android:layout_below="@id/inputPasswordUlang"
+            android:text="Ubah Kata Sandi"
+            />
+    </RelativeLayout>
+</LinearLayout>

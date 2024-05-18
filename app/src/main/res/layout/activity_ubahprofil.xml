@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/graybackground"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        app:titleTextColor="@android:color/white">
+
+        <ImageView
+            android:id="@+id/btBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_margin20"
+            android:src="@drawable/arrowleft" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minHeight="?actionBarSize"
+            android:text="Ubah Profil"
+            android:textAppearance="@style/DPtitletoolbar" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dp_margin20">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_username"
+            android:text="@string/username"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_sizeinputandbutton"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="@dimen/dp_margin5"
+            android:layout_below="@+id/tv_username"
+            android:id="@+id/inputUsername"
+            android:background="@drawable/inputbg"
+            android:hint="@string/username"
+            android:inputType="text"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_email"
+            android:layout_marginTop="@dimen/dp_margin10"
+            android:layout_below="@id/inputUsername"
+            android:text="@string/email"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_sizeinputandbutton"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="@dimen/dp_margin5"
+            android:layout_below="@+id/tv_email"
+            android:id="@+id/inputEmail"
+            android:background="@drawable/inputbg"
+            android:hint="@string/email" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_margin10"
+            android:layout_below="@id/inputEmail"
+            android:id="@+id/tv_upkatassandi"
+            android:text="@string/kata_sandi" />
+
+        <!--        <EditText-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="@dimen/dp_sizeinputandbutton"-->
+        <!--            android:paddingLeft="10dp"-->
+        <!--            android:layout_marginTop="@dimen/dp_margin5"-->
+        <!--            android:layout_below="@+id/tv_upkatassandi"-->
+        <!--            android:id="@+id/inputVerifikasi"-->
+        <!--            android:background="@drawable/inputbg"-->
+        <!--            android:hint="@string/verifikasi_kata_sandi"-->
+        <!--            android:inputType="textPassword"-->
+        <!--            />-->
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_sizeinputandbutton"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_rounddarkblue"
+            android:layout_marginTop="30dp"
+            android:id="@+id/btSimpan"
+            android:layout_below="@id/inputEmail"
+            android:text="@string/simpan_perubahan" />
+    </RelativeLayout>
+</LinearLayout>

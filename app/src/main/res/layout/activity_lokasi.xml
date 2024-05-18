@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.LokasiActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_16sdp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_provinsi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inputAlamat"
+            android:layout_marginTop="@dimen/dp_margin10"
+            android:text="Provinsi" />
+
+        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            android:id="@+id/spProvinsi"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_sizeinputandbutton"
+            android:layout_below="@+id/tv_provinsi"
+            android:layout_marginTop="@dimen/dp_margin5"
+            android:background="@drawable/inputbg"
+            android:inputType="textPassword"
+            android:paddingLeft="10dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inputAlamat"
+            android:layout_marginTop="@dimen/dp_margin10"
+            android:text="Kota" />
+
+        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            android:id="@+id/spKota"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_sizeinputandbutton"
+            android:layout_below="@+id/tv_provinsi"
+            android:layout_marginTop="@dimen/dp_margin5"
+            android:background="@drawable/inputbg"
+            android:inputType="textPassword"
+            android:paddingLeft="10dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inputAlamat"
+            android:layout_marginTop="@dimen/dp_margin10"
+            android:text="Kecamatan" />
+
+        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            android:id="@+id/spKecamatan"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_sizeinputandbutton"
+            android:layout_below="@+id/tv_provinsi"
+            android:layout_marginTop="@dimen/dp_margin5"
+            android:background="@drawable/inputbg"
+            android:inputType="textPassword"
+            android:paddingLeft="10dp" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

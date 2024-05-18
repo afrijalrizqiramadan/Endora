@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.asyabab.endora">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/icon"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/DPAppWhite"
+        tools:targetApi="q">
+        <activity android:name=".ui.activity.MetodePembayaranActivity" />
+        <activity android:name=".ui.activity.BerandaActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+
+
+            <!-- </intent-filter> -->
+
+        </activity>
+        <activity android:name=".ui.activity.DetailBrandActivity"></activity>
+        <activity android:name=".ui.activity.LoginActivity" />
+        <activity android:name=".ui.activity.DetailProdukActivity">
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.endoracare.com"
+                    android:pathPrefix="/product"
+                    android:scheme="https" />
+                <!-- <data android:scheme="app" android:host="com.asyabab.endora" android:pathPrefix="/product"/> -->
+
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.activity.DaftarActivity" />
+        <activity android:name=".ui.activity.BerhasilDaftarActivity" />
+        <activity android:name=".ui.activity.LupaSandiActivity" />
+        <activity android:name=".ui.activity.UbahKataSandiActivity" />
+        <activity android:name=".ui.activity.BantuanActivity" />
+        <activity android:name=".ui.activity.PembelianActivity" />
+        <activity android:name=".ui.activity.JelajahActivity"></activity>
+        <activity android:name=".ui.activity.PencarianActivity">
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.endoracare.com"
+                    android:pathPrefix="/api"
+                    android:scheme="https" />
+                <!-- <data android:scheme="https" android:host="www.example.com" /> -->
+                <!-- <data android:scheme="app" android:host="open.my.app" /> -->
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.activity.UbahProfilActivity"></activity>
+        <activity android:name=".ui.activity.cart.TasBelanjaActivity"></activity>
+        <activity android:name=".ui.activity.MapsActivity"></activity>
+        <activity android:name=".ui.activity.AturAlamatActivity"></activity>
+        <activity android:name=".ui.activity.PengaturanLainActivity" />
+        <activity android:name=".ui.activity.TambahAlamatActivity"></activity>
+        <activity android:name=".ui.activity.PemberitahuanActivity" />
+        <activity android:name=".ui.activity.DetailOfferActivity" />
+        <activity android:name=".ui.activity.RincianProfilActivity"></activity>
+        <activity android:name=".ui.activity.FinalPembayaranActivity"></activity>
+        <activity android:name=".ui.activity.RincianSelesaiActivity"></activity>
+        <activity android:name=".ui.activity.RincianPesananActivity"></activity>
+        <activity android:name=".ui.activity.KonfirmasiEmailActivity"></activity>
+        <activity android:name=".ui.activity.RincianBelumBayarActivity"></activity>
+        <activity android:name=".ui.activity.RincianDibatalkanActivity"></activity>
+        <activity android:name=".ui.activity.RincianDikirimActivity"></activity>
+        <activity android:name=".ui.activity.RincianDikemasActivity"></activity>
+        <activity android:name=".ui.activity.WebViewActivity"></activity>
+        <activity android:name=".ui.activity.UbahKataSandi2Activity" />
+        <activity android:name=".ui.activity.GambarPengirimanActivity" />
+        <activity android:name=".ui.activity.StatusPengirimanActivity" />
+        <activity android:name=".ui.activity.RincianKomplainActivity" />
+        <activity android:name=".ui.activity.PembatalanPesananActivity" />
+        <activity android:name=".utils.ImagePickerActivity" />
+        <activity android:name=".ui.activity.CheckoutActivity" />
+        <activity android:name=".ui.activity.CaraPembayaranActivity" />
+        <activity
+            android:name=".ui.activity.SplashScreenActivity"
+            android:label="@string/app_name"
+            android:theme="@style/DPAppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"
+            tools:replace="android:value" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <service
+            android:name=".data.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAjH-rHGUnw04tILgTcEmeCFggx5uYy7mY" />
+    </application>
+
+</manifest>

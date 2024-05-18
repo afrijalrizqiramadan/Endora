@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_60sdp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_68sdp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginVertical="8dp">
+
+        <ImageView
+            android:id="@+id/roundedImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/contohgambar4"
+            android:background="@color/white"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/tvNamaJelajah"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/_14sdp"
+            android:textAllCaps="true"
+            android:textColor="@color/blackgray"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:text="APP" />
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

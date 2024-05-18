@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/_80sdp"
+    android:layout_height="@dimen/_120sdp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:padding="@dimen/_5sdp">
+
+        <com.asyabab.endora.utils.CircleImageView
+            android:layout_width="@dimen/_56sdp"
+            android:layout_height="@dimen/_56sdp"
+            android:src="@drawable/contohgambar1"
+            android:layout_gravity="center"
+            android:id="@+id/tvKategoriGambar" />
+
+        <TextView
+            android:id="@+id/tvKategoriNama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Adidas"
+            android:layout_gravity="center"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:textColor="@color/blackgray"
+            android:gravity="center"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</LinearLayout>

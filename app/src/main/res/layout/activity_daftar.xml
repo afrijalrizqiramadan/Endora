@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/graybackground">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:textColor="@color/white"
+            android:visibility="invisible"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:background="@color/failed"
+            android:id="@+id/tvGagalDaftar" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_20sdp">
+
+            <TextView
+                android:id="@+id/tv_daftar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blackgray"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="Daftar"
+                android:textSize="24dp" />
+
+            <EditText
+                android:id="@+id/inputUsername"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_sizeinputandbutton"
+                android:layout_below="@+id/tv_daftar"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/inputbg"
+                android:hint="Username"
+                android:digits="_,qwertzuiopasdfghjklyxcvbnm,0123456789"
+                android:paddingLeft="10dp" />
+
+            <EditText
+                android:id="@+id/inputEmail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_sizeinputandbutton"
+                android:layout_below="@+id/inputUsername"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@drawable/inputbg"
+                android:hint="Email"
+                android:paddingLeft="10dp" />
+
+            <EditText
+                android:id="@+id/inputPassword"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_sizeinputandbutton"
+                android:layout_below="@+id/inputEmail"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@drawable/inputbg"
+                android:hint="Kata sandi"
+                android:inputType="textPassword"
+                android:paddingLeft="10dp" />
+
+            <EditText
+                android:id="@+id/inputPasswordUlang"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_sizeinputandbutton"
+                android:layout_below="@+id/inputPassword"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@drawable/inputbg"
+                android:hint="Ketik ulang kata sandi"
+                android:inputType="textPassword"
+                android:paddingLeft="10dp" />
+
+            <TextView
+                android:id="@+id/tvPernyataan"
+                style="@style/DPFontMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/inputPasswordUlang"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/blackgray"
+                android:text="@string/dengan_daftar"
+                android:textAlignment="center"
+                android:textSize="@dimen/dp_font_size_small" />
+
+            <Button
+                android:id="@+id/btDaftar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_sizeinputandbutton"
+                android:layout_below="@id/tvPernyataan"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_roundblue"
+                android:text="Daftar"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tv_atau"
+                android:layout_width="109dp"
+                android:layout_height="16dp"
+                android:textColor="@color/blackgray"
+                android:layout_below="@id/btDaftar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_horizontal|top"
+                android:text="Atau" />
+
+            <LinearLayout
+                android:id="@+id/btGoogleLogin"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_sizeinputandbutton"
+                android:layout_below="@id/tv_atau"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:background="@drawable/bg_roundwhite"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/logogoogle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/blackgray"
+                    android:background="@color/white"
+                    android:text="Lanjutkan dengan Google" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btFBLogin"
+                android:visibility="invisible"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_sizeinputandbutton"
+                android:layout_below="@id/btGoogleLogin"
+                android:background="@drawable/bg_roundwhite"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/logofb" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/white"
+                    android:text="Lanjutkan dengan Facebook" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_btmasuk"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/btFBLogin"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp"
+                    android:textColor="@color/blackgray"
+                    android:layout_marginTop="10dp"
+                    android:text="Sudah Punya Akun ?" />
+
+                <TextView
+                    android:id="@+id/btMasuk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/masuk"
+                    android:textColor="@color/blue" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="@dimen/_58sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_below="@id/layout_btmasuk"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:src="@drawable/endorabiru" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_110sdp"
+            android:layout_alignParentBottom="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/bg_bottom" />
+    </LinearLayout>
+
+
+</ScrollView>

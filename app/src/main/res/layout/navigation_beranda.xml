@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:paddingBottom="@dimen/activity_vertical_margin">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:id="@+id/btBeranda"
+        android:onClick="pageBeranda"
+        android:paddingHorizontal="@dimen/dp_margin20"
+        android:gravity="center_vertical"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:id="@+id/icon_home"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_home"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blackgray"
+            android:layout_toRightOf="@id/icon_home"
+            android:textSize="@dimen/_14sdp"
+            android:text="Beranda"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/arrowright"/>
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/graybackground"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:paddingHorizontal="@dimen/dp_margin20"
+        android:gravity="center_vertical"
+        android:onClick="pageProfilSaya"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:id="@+id/icon_profil"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_profil"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blackgray"
+            android:layout_toRightOf="@id/icon_profil"
+            android:textSize="@dimen/_14sdp"
+            android:text="Profil Saya"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/arrowright"/>
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/graybackground"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:paddingHorizontal="@dimen/dp_margin20"
+        android:gravity="center_vertical"
+        android:onClick="pageFavorit"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:id="@+id/icon_favorit"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_love"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@color/blackgray"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/icon_favorit"
+            android:textSize="@dimen/_14sdp"
+            android:text="Favorit Saya"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/arrowright"/>
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/graybackground"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:paddingHorizontal="@dimen/dp_margin20"
+        android:onClick="pagePembelian"
+        android:gravity="center_vertical"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:id="@+id/icon_pembelian"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_keranjang"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@color/blackgray"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/icon_pembelian"
+            android:textSize="@dimen/_14sdp"
+            android:text="Pembelian"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/arrowright"/>
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/graybackground"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:paddingHorizontal="@dimen/dp_margin20"
+        android:gravity="center_vertical"
+        android:id="@+id/btBantuan"
+        android:onClick="pageBantuan"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:id="@+id/icon_help"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_help"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blackgray"
+            android:layout_toRightOf="@id/icon_help"
+            android:textSize="@dimen/_14sdp"
+            android:text="Bantuan"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/arrowright"/>
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/graybackground"/>
+
+    <TextView
+        android:id="@+id/privacy_pra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:textSize="@dimen/_10sdp"
+        android:onClick="pagePrivacy"
+        android:layout_gravity="center"
+        android:text="@string/privacy_pra"
+        android:textAppearance="@style/bluelink"
+        android:gravity="center_horizontal|top" />
+</LinearLayout>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--    <FrameLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:id="@+id/frameshimmer"-->
+    <!--        android:layout_below="@id/apptoolbar"-->
+    <!--        android:visibility="visible">-->
+    <!--        <include layout="@layout/shimmer_jelajah"/>-->
+    <!--    </FrameLayout>-->
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/apptoolbar"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_margin5"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:id="@+id/btBack"
+                android:src="@drawable/icon_left" />
+
+            <TextView
+                android:id="@+id/titletoolbar"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_toRightOf="@id/btBack"
+                android:minHeight="?actionBarSize"
+                android:text="Jelajah"
+                android:textAppearance="@style/DPtitletoolbar" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btTasBelanja"
+                android:onClick="pageTasBelanja"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="end"
+                android:layout_alignParentEnd="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_tasbelanja2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="8dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="25dp"
+                    android:gravity="center"
+                    android:id="@+id/tvIconNumber"
+                    android:background="@drawable/bg_circleblue"
+                    android:text="0" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btSearch"
+                android:layout_toLeftOf="@id/btTasBelanja"
+                android:src="@drawable/icon_search"
+                android:layout_gravity="end"
+                android:layout_toStartOf="@id/btTasBelanja" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <!--    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:id="@+id/swipeResfresh"-->
+    <!--        android:layout_below="@id/apptoolbar"-->
+    <!--        android:layout_height="match_parent">-->
+    <!--        <ScrollView-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:id="@+id/framemain"-->
+    <!--            android:visibility="gone"-->
+    <!--            android:layout_marginBottom="@dimen/_40sdp">-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:orientation="vertical">-->
+    <!--    <androidx.recyclerview.widget.RecyclerView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:id="@+id/rvJelajah"-->
+    <!--        />-->
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:orientation="vertical"-->
+    <!--        android:layout_below="@id/apptoolbar">-->
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="57dp"-->
+    <!--            android:layout_marginTop="@dimen/dp_margin20"-->
+    <!--            android:gravity="center_vertical"-->
+    <!--            android:background="@drawable/bg_holiday">-->
+    <!--            <TextView-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                style="@style/fontjelajah"-->
+    <!--                android:textColor="@color/white"-->
+    <!--                android:layout_marginLeft="@dimen/dp_margin20"-->
+    <!--                android:text="Holiday Shop"/>-->
+    <!--        </LinearLayout>-->
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="57dp"-->
+    <!--            android:gravity="center_vertical"-->
+    <!--            android:background="@drawable/bg_etalasebrand">-->
+    <!--            <TextView-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                style="@style/fontjelajah"-->
+    <!--                android:textColor="@color/brown"-->
+    <!--                android:layout_marginLeft="@dimen/dp_margin20"-->
+    <!--                android:text="Etalase Brand"/>-->
+    <!--        </LinearLayout>-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="57dp"-->
+    <!--            android:gravity="center_vertical"-->
+    <!--            android:background="@drawable/bg_wanita">-->
+    <!--            <TextView-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                style="@style/fontjelajah"-->
+    <!--                android:textColor="@color/brown"-->
+    <!--                android:layout_marginLeft="@dimen/dp_margin20"-->
+    <!--                android:text="Wanita"/>-->
+    <!--        </LinearLayout>-->
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="57dp"-->
+    <!--            android:gravity="center_vertical"-->
+    <!--            android:background="@drawable/bg_ibuanak">-->
+    <!--            <TextView-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                style="@style/fontjelajah"-->
+    <!--                android:textColor="@color/blackgray"-->
+    <!--                android:layout_marginLeft="@dimen/dp_margin20"-->
+    <!--                android:text="Ibu &amp; Anak"/>-->
+    <!--        </LinearLayout>-->
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="57dp"-->
+    <!--            android:gravity="center_vertical"-->
+    <!--            android:background="@drawable/bg_kerajinan">-->
+    <!--            <TextView-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                style="@style/fontjelajah"-->
+    <!--                android:textColor="@color/violet"-->
+    <!--                android:layout_marginLeft="@dimen/dp_margin20"-->
+    <!--                android:text="Kerajinan"/>-->
+    <!--        </LinearLayout>-->
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="57dp"-->
+    <!--            android:gravity="center_vertical"-->
+    <!--            android:background="@drawable/bg_pria">-->
+    <!--            <TextView-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                style="@style/fontjelajah"-->
+    <!--                android:textColor="@color/white"-->
+    <!--                android:layout_marginLeft="@dimen/dp_margin20"-->
+    <!--                android:text="Pria"/>-->
+    <!--        </LinearLayout>-->
+    <!--        <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="57dp"-->
+    <!--        android:gravity="center_vertical"-->
+    <!--        android:background="@drawable/bg_mainananak">-->
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            style="@style/fontjelajah"-->
+    <!--            android:textColor="@color/violet"-->
+    <!--            android:layout_marginLeft="@dimen/dp_margin20"-->
+    <!--            android:text="Mainan anak"/>-->
+    <!--    </LinearLayout>-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="57dp"-->
+    <!--            android:gravity="center_vertical"-->
+    <!--            android:background="@drawable/bg_dekorasirumah">-->
+    <!--            <TextView-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                style="@style/fontjelajah"-->
+    <!--                android:textColor="@color/brown"-->
+    <!--                android:layout_marginLeft="@dimen/dp_margin20"-->
+    <!--                android:text="Dekorasi rumah"/>-->
+    <!--        </LinearLayout>-->
+
+    <!--    </LinearLayout>-->
+    <!--        </LinearLayout>-->
+    <!--        </ScrollView>-->
+    <!--    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>-->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/apptoolbar" />
+</RelativeLayout>

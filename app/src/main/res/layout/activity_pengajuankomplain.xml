@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/graybackground"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:titleTextColor="@android:color/white"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_margin20"
+            android:id="@+id/btBack"
+            android:src="@drawable/arrowleft" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minHeight="?actionBarSize"
+            android:text="Pengajuan Komplain"
+            android:textAppearance="@style/DPtitletoolbar" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/_15sdp"
+        android:paddingVertical="@dimen/_5sdp"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/textbold"
+            android:text="No. Pesanan #1313XYZ1212YXZ" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12 Agustus 2020 12.10" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Produk 4" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:id="@+id/tv_keterangan"
+        android:background="@drawable/bg_lightorange">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_info"
+            android:id="@+id/icon_info"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_toRightOf="@id/icon_info"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:text="Pastikan Anda telah membaca dan memahami Syarat dan Ketentuan Komplain dari kami sebelum melakukan pengajuan komplain barang" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/_15sdp"
+        android:paddingHorizontal="15dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pilih jenis komplain" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_sizeinputandbutton"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_below="@+id/keterangan"
+            android:id="@+id/input_password1"
+            android:background="@drawable/inputbg"
+            android:hint="@string/kata_sandi_baru"
+            android:inputType="textPassword"
+            android:paddingStart="10dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="File pendukung" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_sizeinputandbutton"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:id="@+id/input_password2"
+            android:background="@drawable/inputbg"
+            android:hint="@string/ketik_ulang_sandi_baru"
+            android:inputType="textPassword" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/graybutton"
+            android:text="Format file .jpg .mp4 atau .pdf (maks. 5mb)" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Sampaikan detail komplain anda" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_sizeinputandbutton"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/inputbg"
+            android:hint="@string/ketik_ulang_sandi_baru"
+            android:inputType="textPassword" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/graybutton"
+            android:text="Tersisa 100 Kata  (maks.150 kata)" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Solusi yang Anda tawarkan" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_sizeinputandbutton"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/inputbg"
+            android:hint="@string/ketik_ulang_sandi_baru"
+            android:inputType="textPassword" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Nomor telepon yang dapat dihubungi" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_sizeinputandbutton"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/inputbg"
+            android:hint="@string/ketik_ulang_sandi_baru"
+            android:inputType="textPassword" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_sizeinputandbutton"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_rounddarkblue"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:textAllCaps="false"
+            android:id="@+id/btUbahKataSandi"
+            android:text="Kirim Pengajuan Komplain" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:text="Urutkan"
+        android:gravity="center_vertical"
+        android:padding="@dimen/_10sdp"
+        android:textSize="@dimen/_14sdp"
+        android:textAllCaps="false" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/graybackground" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@color/white">
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:paddingHorizontal="@dimen/_15sdp"
+            android:text="Berdasarkan Harga Termurah"
+            android:gravity="center_vertical"
+            android:textColor="@color/blackgray"
+            android:id="@+id/radioBtn1"/>
+
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:paddingHorizontal="@dimen/_15sdp"
+            android:text="Berdasarkan Harga Termahal"
+            android:gravity="center_vertical"
+            android:textColor="@color/blackgray"
+            android:id="@+id/radioBtn2"/>
+
+<!--        <RadioButton-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:background="@color/white"-->
+<!--            android:layout_height="@dimen/_40sdp"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginHorizontal="@dimen/_10sdp"-->
+<!--            android:paddingHorizontal="@dimen/_15sdp"-->
+<!--            android:text="Berdasarkan Harga Terlaris"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:textColor="@color/blackgray"-->
+<!--            android:id="@+id/radioBtn3"/>-->
+<!--        <RadioButton-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:background="@color/white"-->
+<!--            android:layout_height="@dimen/_40sdp"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginHorizontal="@dimen/_10sdp"-->
+<!--            android:paddingHorizontal="@dimen/_15sdp"-->
+<!--            android:text="Berdasarkan Harga Terfavorit"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:textColor="@color/blackgray"-->
+<!--            android:id="@+id/radioBtn4"/>-->
+        <RadioButton
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:paddingHorizontal="@dimen/_15sdp"
+            android:text="Berdasarkan Abjad A-Z"
+            android:gravity="center_vertical"
+            android:textColor="@color/blackgray"
+            android:id="@+id/radioBtn5"/>
+        <RadioButton
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:paddingHorizontal="@dimen/_15sdp"
+            android:text="Berdasarkan Abjad Z-A"
+            android:gravity="center_vertical"
+            android:textColor="@color/blackgray"
+            android:id="@+id/radioBtn6"/>
+
+
+    </RadioGroup>
+
+</LinearLayout>

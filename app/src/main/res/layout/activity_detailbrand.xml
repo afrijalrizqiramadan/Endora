@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/graybackground"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/frameshimmer"
+        android:layout_below="@id/apptoolbar"
+        android:visibility="gone">
+
+        <include layout="@layout/shimmer_detailbrand" />
+    </FrameLayout>
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/apptoolbar"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_margin5"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:id="@+id/btBack"
+                android:src="@drawable/icon_left" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_toRightOf="@id/btBack"
+                android:minHeight="?actionBarSize"
+                android:text="Brand"
+                android:textAppearance="@style/DPtitletoolbar" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btTasBelanja"
+                android:onClick="pageTasBelanja"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="end"
+                android:layout_alignParentEnd="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_tasbelanja2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="8dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="25dp"
+                    android:gravity="center"
+                    android:id="@+id/tvIconNumber"
+                    android:background="@drawable/bg_circleblue"
+                    android:text="0" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btSearch"
+                android:layout_toLeftOf="@id/btTasBelanja"
+                android:src="@drawable/icon_search"
+                android:layout_gravity="end"
+                android:layout_toStartOf="@id/btTasBelanja" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:id="@+id/swipeResfresh"
+        android:layout_below="@id/apptoolbar"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/framemain"
+            android:visibility="visible"
+            android:layout_marginBottom="@dimen/_40sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@id/toolbar"
+                    android:background="@color/white">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_180sdp"
+                        android:scaleType="centerCrop"
+                        android:id="@+id/tvBackgoundBrand"
+                        android:src="@drawable/bg_brand" />
+
+                    <com.asyabab.endora.utils.CircleImageView
+                        android:id="@+id/tvLogoBrand"
+                        android:layout_marginTop="@dimen/_145sdp"
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/icon_brand" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvLogoBrand"
+                        android:id="@+id/tvNamaBrand"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:textColor="@color/blackgray"
+                        android:textSize="@dimen/_18sdp"
+                        android:layout_centerHorizontal="true"
+                        android:text="ADIDAS" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="@dimen/_14sdp"
+                        android:layout_below="@id/tvNamaBrand"
+                        android:id="@+id/tvJumlahProduk"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:text="20 Produk" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_110sdp"
+                    android:id="@id/toolbar"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_90sdp"
+                        android:textColor="@color/blackgray"
+                        android:background="@color/white"
+                        android:textSize="@dimen/_12sdp"
+                        android:id="@+id/tvDeskripsiBrand"
+                        android:text="Adidas adalah produsen pakaian olahraga dan sepatu yang handal dan dibutuhkan setiap atlet untuk tetap segar dan menjadi yang terbaik ..."
+                        android:padding="@dimen/_20sdp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btKeteranganBrand"
+                        style="@style/bluelink"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        android:text="Selengkapnya"
+                        android:padding="@dimen/_20sdp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/graybackground" />
+
+                <LinearLayout
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:weightSum="3"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="@dimen/dp_margin20">
+
+                        <ImageView
+                            android:layout_width="19dp"
+                            android:layout_height="@dimen/sizeicon"
+                            android:src="@drawable/icon_share" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/dp_font_size_medium"
+                            android:text="Bagikan" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="@dimen/dp_margin20">
+
+                        <ImageView
+                            android:layout_width="19dp"
+                            android:layout_height="@dimen/sizeicon"
+                            android:src="@drawable/icon_urutkan" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/dp_font_size_medium"
+                            android:text="Urutkan" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="@dimen/dp_margin20">
+
+                        <ImageView
+                            android:layout_width="19dp"
+                            android:layout_height="@dimen/sizeicon"
+                            android:src="@drawable/icon_filter" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:textSize="@dimen/dp_font_size_medium"
+                            android:text="Filter" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:weightSum="2"
+                    android:orientation="horizontal">
+
+                    <!--            <LinearLayout-->
+                    <!--                android:layout_width="0dp"-->
+                    <!--                android:layout_weight="1"-->
+                    <!--                android:layout_height="50dp"-->
+                    <!--                android:id="@+id/btShare"-->
+
+                    <!--                android:gravity="center"-->
+                    <!--                android:orientation="horizontal"-->
+                    <!--                android:paddingHorizontal="@dimen/dp_margin20">-->
+
+                    <!--                <ImageView-->
+                    <!--                    android:layout_width="19dp"-->
+                    <!--                    android:layout_height="@dimen/sizeicon"-->
+                    <!--                    android:src="@drawable/icon_share" />-->
+
+                    <!--                <TextView-->
+                    <!--                    android:layout_width="wrap_content"-->
+                    <!--                    android:layout_height="wrap_content"-->
+                    <!--                    android:textSize="@dimen/dp_font_size_medium"-->
+                    <!--                    android:textColor="@color/blackgray"-->
+                    <!--                    android:text="Bagikan"/>-->
+                    <!--            </LinearLayout>-->
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:id="@+id/btUrutkan"
+
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="@dimen/dp_margin20">
+
+                        <ImageView
+                            android:layout_width="19dp"
+                            android:layout_height="@dimen/sizeicon"
+                            android:src="@drawable/icon_urutkan" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/dp_font_size_medium"
+                            android:textColor="@color/blackgray"
+                            android:text="Urutkan" />
+                    </LinearLayout>
+
+                    <!--                    <LinearLayout-->
+                    <!--                        android:layout_width="0dp"-->
+                    <!--                        android:layout_weight="1"-->
+                    <!--                        android:layout_height="50dp"-->
+                    <!--                        android:gravity="center"-->
+                    <!--                        android:id="@+id/btFilter"-->
+                    <!--                        android:orientation="horizontal"-->
+                    <!--                        android:paddingHorizontal="@dimen/dp_margin20">-->
+
+                    <!--                        <ImageView-->
+                    <!--                            android:layout_width="19dp"-->
+                    <!--                            android:layout_height="@dimen/sizeicon"-->
+                    <!--                            android:src="@drawable/icon_filter" />-->
+
+                    <!--                        <TextView-->
+                    <!--                            android:layout_width="wrap_content"-->
+                    <!--                            android:layout_height="wrap_content"-->
+                    <!--                            android:textColor="@color/blackgray"-->
+                    <!--                            android:textSize="@dimen/dp_font_size_medium"-->
+                    <!--                            android:text="Filter" />-->
+                    <!--                    </LinearLayout>-->
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/rvBarangBrand" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</RelativeLayout>

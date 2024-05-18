@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/bg_ulasan" />
+
+        <ImageView
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/tvStarCenter"
+            android:src="@drawable/staryellow" />
+
+        <ImageView
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_toLeftOf="@id/tvStarCenter"
+            android:layout_centerVertical="true"
+            android:src="@drawable/staryellow" />
+
+        <ImageView
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_toRightOf="@id/tvStarCenter"
+            android:layout_centerVertical="true"
+            android:src="@drawable/staryellow" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_18sdp"
+        android:paddingHorizontal="@dimen/_14sdp"
+        android:textColor="@color/blackgray"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_gravity="center"
+        android:text="Terima Kasih atas Ulasan Anda" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_12sdp"
+        android:paddingHorizontal="@dimen/_14sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:gravity="center"
+        android:text="Dengan memberi ulasan Anda telah mendukung kami dalam memperbaiki pelayanan kami" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:text="Beri Rating Aplikasi"
+        android:textSize="@dimen/_14sdp"
+        android:id="@+id/btRatingAplikasi"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:textAllCaps="false"
+        android:background="@color/white" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/graybackground" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:text="Keluar"
+        android:id="@+id/btKeluar"
+        android:textSize="@dimen/_14sdp"
+        style="@style/btred" />
+</LinearLayout>

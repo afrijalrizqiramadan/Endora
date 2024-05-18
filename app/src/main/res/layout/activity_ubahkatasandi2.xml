@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/graybackground"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:titleTextColor="@android:color/white"
+        android:background="@color/white">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_margin20"
+            android:id="@+id/btBack"
+            android:src="@drawable/arrowleft" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minHeight="?actionBarSize"
+            android:text="@string/ubah_kata_sandi"
+            android:textAppearance="@style/DPtitletoolbar" />
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dp_margin20">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_username"
+            android:text="Kata sandi baru"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_sizeinputandbutton"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="@dimen/dp_margin5"
+            android:layout_below="@+id/tv_username"
+            android:id="@+id/inputPassword"
+            android:background="@drawable/inputbg"
+            android:hint="Kata sandi baru"
+            android:inputType="textPassword"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_email"
+            android:layout_marginTop="@dimen/dp_margin10"
+            android:layout_below="@id/inputPassword"
+            android:text="Ketik ulang kata sandi baru" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_sizeinputandbutton"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="@dimen/dp_margin5"
+            android:layout_below="@+id/tv_email"
+            android:id="@+id/inputPasswordUlang"
+            android:background="@drawable/inputbg"
+            android:inputType="textPassword"
+            android:hint="Ketik ulang kata sandi baru" />
+        <!--        <TextView-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="@dimen/dp_margin10"-->
+        <!--            android:layout_below="@id/inputPasswordUlang"-->
+        <!--            android:id="@+id/tv_upkatassandi"-->
+        <!--            android:text="@string/kata_sandi_lama"/>-->
+
+        <!--        <EditText-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="@dimen/dp_sizeinputandbutton"-->
+        <!--            android:paddingLeft="10dp"-->
+        <!--            android:layout_marginTop="@dimen/dp_margin5"-->
+        <!--            android:layout_below="@+id/tv_upkatassandi"-->
+        <!--            android:id="@+id/inputPasswordLama"-->
+        <!--            android:background="@drawable/inputbg"-->
+        <!--            android:hint="Kata sandi lama"-->
+        <!--            android:inputType="textPassword"-->
+        <!--            />-->
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_sizeinputandbutton"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_rounddarkblue"
+            android:layout_marginTop="30dp"
+            android:id="@+id/btUbahKataSandi2"
+            android:layout_below="@id/inputPasswordUlang"
+            android:text="@string/simpan_perubahan" />
+    </RelativeLayout>
+</LinearLayout>

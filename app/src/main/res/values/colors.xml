@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6EEAF4</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="graybackground">#F2F2F2</color>
+    <color name="grayback">#E4E4E4</color>
+    <color name="white">#fff</color>
+    <color name="greenlight">#DDFFEB</color>
+    <color name="blackgray">#333333</color>
+    <color name="black">#000</color>
+    <color name="failed">#FF8A8A</color>
+    <color name="redlight">#FFDCDC</color>
+    <color name="orangelight">#FFF4D3</color>
+    <color name="red">#EB5757</color>
+    <color name="orange">#F2994A</color>
+    <color name="success">#6FCF97</color>
+    <color name="green">#27AE60</color>
+    <color name="blue">#2F80ED</color>
+    <color name="bluetoggle">#56CCF2</color>
+    <color name="dp_app_background">#FAFAFA</color>
+    <color name="dp_view_color">#DADADA</color>
+    <color name="graybutton">#C4C4C4</color>
+    <color name="graytxt">#7D7D7D</color>
+    <color name="brown">#753E25</color>
+    <color name="violet">#5C1E2C</color>
+    <color name="lightorange">#FFF4D3</color>
+    <color name="dp_textColorSecondary">#9D9D9D</color>
+    <color name="shimmering_background">#eaeaea</color>
+    <color name="gold">#FFE714</color>
+
+</resources>

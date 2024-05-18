@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp"
+        android:background="@color/white">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_nopesanan"
+                android:textColor="@color/blackgray"
+                android:text="No. Pesanan"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvNoPesanan"
+                    android:textColor="@color/blackgray"
+                    android:layout_toRightOf="@id/tv_nopesanan"
+                    android:text="#12345678"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvTanggalPemesanan"
+                android:layout_below="@id/tv_nopesanan"
+                android:text="139 832 038 012 380"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvTanggalPemesanan"
+                android:id="@+id/tvJumlahBarang"
+                android:text="Rincian"/>
+
+            </RelativeLayout>
+            <ImageView
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:padding="@dimen/_15sdp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/arrowright"/>
+        </RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rvListBarang" />
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:padding="@dimen/_10sdp"
+        android:id="@+id/tvDetailPengiriman"
+        android:background="@color/greenlight">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/icon_shipment"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_shipment"/>
+        <TextView
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvKeteranganPengiriman"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_toRightOf="@id/icon_shipment"
+            android:text="Pesanan Anda akan dikirimkan sebelum 19-10-2020 12.00"
+            android:textColor="@color/blackgray"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40sdp"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:text="Detail"
+            android:textAllCaps="false"
+            android:id="@+id/btDetailPengiriman"
+            android:layout_alignParentRight="true"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:textColor="@color/blue"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:padding="@dimen/_10sdp"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvKeterangan"
+            android:text="Konfirmasi terima produk sebelum  19-10-2020 12.00"
+            android:textColor="@color/blackgray"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40sdp"
+            android:id="@+id/btPaketDiterima"
+            android:layout_centerVertical="true"
+            android:text="Telah Diterima"
+            android:textAllCaps="false"
+            android:layout_alignParentRight="true"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_borderwhiteblue"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/graybackground"/>
+
+</LinearLayout>

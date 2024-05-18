@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/graybackground"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:titleTextColor="@android:color/white"
+        android:background="@color/white">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_margin20"
+            android:id="@+id/btBack"
+            android:src="@drawable/arrowleft" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minHeight="?actionBarSize"
+            android:text="Atur Alamat"
+            android:textAppearance="@style/DPtitletoolbar" />
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dp_margin20">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_username"
+            android:text="Label alamat"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:hint="Kantor, Rumah, Kos"
+            android:layout_marginTop="@dimen/dp_margin5"
+            android:layout_below="@+id/tv_username"
+            android:id="@+id/inputLabel"
+            android:background="@drawable/inputbg" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_penerima"
+            android:layout_marginTop="@dimen/dp_margin10"
+            android:layout_below="@id/inputLabel"
+            android:text="Penerima"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_sizeinputandbutton"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="@dimen/dp_margin5"
+            android:layout_below="@+id/tv_penerima"
+            android:id="@+id/inputNamaPenerima"
+            android:background="@drawable/inputbg" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_telepon"
+            android:layout_marginTop="@dimen/dp_margin10"
+            android:layout_below="@id/inputNamaPenerima"
+            android:text="No Telepon"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_sizeinputandbutton"
+            android:paddingLeft="10dp"
+            android:inputType="number"
+            android:layout_marginTop="@dimen/dp_margin5"
+            android:layout_below="@+id/tv_telepon"
+            android:id="@+id/inputTelepon"
+            android:background="@drawable/inputbg" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_margin10"
+            android:layout_below="@id/inputTelepon"
+            android:id="@+id/tv_alamat"
+            android:text="Alamat"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="top|start"
+            android:padding="@dimen/dp_margin10"
+            android:layout_marginTop="@dimen/dp_margin5"
+            android:layout_below="@+id/tv_alamat"
+            android:id="@+id/inputAlamat"
+            android:background="@drawable/inputbg" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_margin10"
+            android:layout_below="@id/inputAlamat"
+            android:id="@+id/tv_provinsi"
+            android:text="Provinsi"/>
+
+
+        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            android:id="@+id/spProvinsi"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_sizeinputandbutton"
+            android:layout_below="@+id/tv_provinsi"
+            android:layout_marginTop="@dimen/dp_margin5"
+            android:background="@drawable/inputbg"
+            android:paddingLeft="10dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spProvinsi"
+            android:id="@+id/tv_kota"
+            android:layout_marginTop="@dimen/dp_margin10"
+            android:text="Kota" />
+
+        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            android:id="@+id/spKota"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_sizeinputandbutton"
+            android:layout_below="@+id/tv_kota"
+            android:layout_marginTop="@dimen/dp_margin5"
+            android:background="@drawable/inputbg"
+            android:paddingLeft="10dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spKota"
+            android:id="@+id/tv_kecamatan"
+            android:layout_marginTop="@dimen/dp_margin10"
+            android:text="Kecamatan" />
+
+        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            android:id="@+id/spKecamatan"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_sizeinputandbutton"
+            android:layout_below="@+id/tv_kecamatan"
+            android:layout_marginTop="@dimen/dp_margin5"
+            android:background="@drawable/inputbg"
+            android:paddingLeft="10dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_kodepos"
+            android:layout_marginTop="@dimen/dp_margin10"
+            android:layout_below="@id/spKecamatan"
+            android:text="Kode Pos"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_sizeinputandbutton"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="@dimen/dp_margin5"
+            android:layout_below="@+id/tv_kodepos"
+            android:inputType="number"
+            android:id="@+id/inputKodePos"
+            android:background="@drawable/inputbg" />
+
+        <!--        <TextView-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:id="@+id/tv_catatan"-->
+        <!--            android:layout_marginTop="@dimen/dp_margin10"-->
+        <!--            android:layout_below="@id/inputKodePos"-->
+        <!--            android:text="Catatan"/>-->
+
+        <!--        <androidx.appcompat.widget.AppCompatEditText-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="80dp"-->
+        <!--            android:gravity="top|start"-->
+        <!--            android:padding="@dimen/dp_margin10"-->
+        <!--            android:layout_marginTop="@dimen/dp_margin5"-->
+        <!--            android:layout_below="@+id/tv_catatan"-->
+        <!--            android:id="@+id/inputCatatan"-->
+        <!--            android:background="@drawable/inputbg" />-->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_sizeinputandbutton"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_roundgreen"
+            android:layout_marginTop="30dp"
+            android:id="@+id/btMaps"
+            android:layout_below="@id/inputKodePos"
+            android:text="Maps" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_sizeinputandbutton"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_rounddarkblue"
+            android:layout_marginTop="10dp"
+            android:id="@+id/btSimpan"
+            android:layout_below="@id/btMaps"
+            android:text="@string/simpan_perubahan" />
+
+    </RelativeLayout>
+    </ScrollView>
+</LinearLayout>
